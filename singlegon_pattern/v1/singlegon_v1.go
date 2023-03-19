@@ -2,16 +2,16 @@ package v1
 
 import "fmt"
 
-type singlegonV1 struct {
+type singletonV1 struct {
 }
 
-var instance *singlegonV1
+var instance *singletonV1
 
 func init() {
-	instance = new(singlegonV1)
+	instance = new(singletonV1)
 	fmt.Printf("%p\n", instance)
 }
 
-func GetInstance() *singlegonV1 {
+func GetInstance() *singletonV1 {
 	return instance
 }

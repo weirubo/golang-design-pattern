@@ -5,18 +5,18 @@ import (
 	"sync"
 )
 
-type singlegonV3 struct {
+type singletonV3 struct {
 }
 
-var instance *singlegonV3
+var instance *singletonV3
 
 var mu sync.Mutex
 
-func GetInstance() *singlegonV3 {
+func GetInstance() *singletonV3 {
 	if instance == nil {
 		mu.Lock()
 		defer mu.Unlock()
-		instance = new(singlegonV3)
+		instance = new(singletonV3)
 	}
 	fmt.Printf("%p\n", instance)
 	return instance

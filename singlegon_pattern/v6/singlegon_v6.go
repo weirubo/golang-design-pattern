@@ -5,16 +5,16 @@ import (
 	"sync"
 )
 
-type singlegonV6 struct {
+type singletonV6 struct {
 }
 
-var instance *singlegonV6
+var instance *singletonV6
 
 var once sync.Once
 
-func GetInstance() *singlegonV6 {
+func GetInstance() *singletonV6 {
 	once.Do(func() {
-		instance = new(singlegonV6)
+		instance = new(singletonV6)
 	})
 	fmt.Printf("%p\n", instance)
 	return instance

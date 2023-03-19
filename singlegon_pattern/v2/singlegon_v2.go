@@ -2,14 +2,14 @@ package v2
 
 import "fmt"
 
-type singlegonV2 struct {
+type singletonV2 struct {
 }
 
-var instance *singlegonV2
+var instance *singletonV2
 
-func GetInstance() *singlegonV2 {
+func GetInstance() *singletonV2 {
 	if instance == nil {
-		instance = new(singlegonV2)
+		instance = new(singletonV2)
 	}
 	fmt.Printf("%p\n", instance)
 	return instance
