@@ -1,6 +1,6 @@
 package main
 
-import v6 "golang-design-pattern/singlegon_pattern/v6"
+import v6 "golang-design-pattern/01_singlegon_pattern/v6"
 
 func main() {
 	//v1.GetInstance()
